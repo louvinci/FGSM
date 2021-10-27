@@ -12,10 +12,12 @@ $$  \widetilde{x}  = x + \eta$$
 - $\widetilde{x}$: 对抗样本
   
 对抗攻击就是使得DNN误判的同时，使得图片的改变尽可能少，一般人眼不能识别为标准如下图所示。
+
 <img src = './FGSM.png'>
 
 由于权重不能更改，在已知梯度时，在输入上增加扰动使得模型的loss尽可能地大。这里生成对抗样本时，需要反向传播一次梯度。详情见[ICLR15](https://arxiv.org/abs/1412.6572) 。
 CIFAR10数据集上的可视化效果，这里$\epsilon$ = 0.05：和原始图片几乎一样
+
 <img src = './adversarial.png'>
 
 ## Result
